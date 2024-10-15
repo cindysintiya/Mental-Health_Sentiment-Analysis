@@ -1,0 +1,5 @@
+{% extends "layout.html" %}
+{% block redirect %} <meta http-equiv="refresh" content="3;url=/"> {% endblock %}  <!--Redirecting page in n seconds-->
+{% block title %} {{title}} {% endblock %}
+{% block h1 %} {{content}} {% endblock %}
+{% block content %} <p>Redirecting to Home in 3 secs ... </p> {% endblock %}
