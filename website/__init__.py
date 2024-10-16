@@ -5,12 +5,12 @@ def create_app():
     app.config['SECRET_KEY'] = "secret!hahaha"  # kunci keamanan
 
     # import semua route
-    from .home import home
+    from .loading import loading
     from .analysis import analysis
     
     # buat route
-    app.register_blueprint(home, url_prefix="/")
-    app.register_blueprint(analysis, url_prefix="/result")
+    app.register_blueprint(loading)
+    app.register_blueprint(analysis)
 
     @app.errorhandler(404)   # url/ halaman tdk ditemukan
     def not_found(e) :

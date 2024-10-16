@@ -3,66 +3,62 @@ from flask import Blueprint, render_template, request, redirect
 analysis = Blueprint("analysis", __name__)
 
 import pandas as pd
-raw_data = pd.read_csv("./data/sentiments.csv")
-
-df = raw_data.dropna()
-df.sample(frac = 1).head()
-print(len(df))
-
-classes = df['status'].unique()
-classes
-
-# Another pre-requisites
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
-
-tokenizer = Tokenizer(oov_token='UNK', lower = True)
-tokenizer.fit_on_texts(df['statement'].values)
-
-max_len = max([len(x) for x in tokenizer.texts_to_sequences(df['statement'].values)])   # 5421
-
-vocab_size = len(tokenizer.word_index) + 1
-
-
-# Model path
-PATH = './data/my_model_3.h5'
-
-# Loaded model
 import torch
 
-device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-if (torch.cuda.is_available()):
-    torch.cuda.empty_cache()
-print(device, "\n")
+classes, max_len, vocab_size, tokenizer, device, model = None, None, None, None, None, None
 
-model_load = torch.load(PATH, weights_only=False, map_location=torch.device(device))
-model_load.eval()
+@analysis.route("/home")
+def home_page():
+    # access and save to the global scope variable so another request can still using the same previous data
+    global classes, max_len, vocab_size, tokenizer, device, model
 
-import numpy as np
+    if not model :   # cek apakah sebelumnya model sudah di-load atau belum
+        raw_data = pd.read_csv("./data/sentiments.csv")
+        df = raw_data.dropna()
 
-def transform_class(class_name):
-    a = np.zeros(len(classes))
-    a[classes == class_name] = 1
-    return a
+        classes = df['status'].unique()
 
-def rev_transform_class(class_arr):
-    return classes[class_arr.argmax()]
+        tokenizer = Tokenizer(oov_token='UNK', lower = True)
+        tokenizer.fit_on_texts(df['statement'].values)
 
-def predict_sentiment_load(text):
-    t = torch.from_numpy(pad_sequences(tokenizer.texts_to_sequences([text]), maxlen = max_len))
-    pred = model_load(t.to(device))
+        max_len = max([len(x) for x in tokenizer.texts_to_sequences(df['statement'].values)])   # 5421
+        vocab_size = len(tokenizer.word_index) + 1
 
-    return rev_transform_class(pred)
+        # Model path
+        PATH = './data/sentiment_analysis_model.h5'
 
+        # Checking available device (gpu/ cpu)
+        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        if (torch.cuda.is_available()):
+            torch.cuda.empty_cache()
 
-@analysis.route("/", methods=["POST"])   # main route
+        # Load pretrained model
+        model = torch.load(PATH, weights_only=False, map_location=torch.device(device))
+        model.eval()
+
+    return render_template("home.html")
+
+@analysis.route("/result", methods=["POST"])
 def result():
     sentiment = request.form['sentiment']
     if sentiment:
+        # def rev_transform_class(class_arr):
+        #     return classes[class_arr.argmax()]
+        
+        # def predict_sentiment_load(text):
+        #     t = torch.from_numpy(pad_sequences(tokenizer.texts_to_sequences([text]), maxlen = max_len))
+        #     pred = model(t.to(device))
 
-        result = predict_sentiment_load(sentiment)
+        #     return rev_transform_class(pred)
+        
+        t = torch.from_numpy(pad_sequences(tokenizer.texts_to_sequences([sentiment]), maxlen = max_len))
+        prediction = model(t.to(device))
 
-        return render_template("result.html", data=result)
+        result = classes[prediction.argmax()]
+
+        return render_template("result.html", text=sentiment, data=result)
     
     else :
-        return redirect('/')  # jk tdk ada text yg dimasukkan, kembalikan ke halaman home
+        return redirect('/home')  # jk tdk ada text yg dimasukkan, kembalikan ke halaman home

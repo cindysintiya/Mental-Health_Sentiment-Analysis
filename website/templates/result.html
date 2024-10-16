@@ -1,5 +1,34 @@
 {% extends "layout.html" %}
 {% block title %} Result {% endblock %}
-{% block content %}
-    {{ data }}
+{% block content_left %}
+    <textarea 
+        name="sentiment" id="sentiment" rows="6" 
+        placeholder="Tell me 'bout your feeling here..."
+        class="form-control bg-transparen t"
+        disabled readonly
+    >{{ text }}</textarea>
+    <a class="btn btn-outline-warning mt-3" href="/home">
+        <i class="fa fa-solid fa-rotate-left"></i>
+        <span class="ms-1">Try Again</span>
+    </a>
+{% endblock %}
+{% block content_right %}
+    <div class="mb-3 row">
+        <label for="result" class="col-sm col-form-label px-0">From your story, we guest that it was</label>
+        <div class="col-sm ps-0">
+            <input 
+                name="result" id="result"
+                placeholder="Your predicted mental health will show here..."
+                class="form-control bg-transparen t fw-bold text-uppercase"
+                disabled readonly
+                value={{ data }}
+            >
+        </div>
+    </div>
+    <textarea 
+        name="description" id="description" rows="5" 
+        placeholder="Let me describe to you what is that situation..."
+        class="form-control bg-transparen t"
+        disabled readonly
+    ></textarea>
 {% endblock %}

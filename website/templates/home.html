@@ -1,51 +1,30 @@
 {% extends "layout.html" %}
 {% block title %} Home {% endblock %}
-{% block style %}
-    <style>
-        body {
-            /* background-image: url("https://qualetics.com/wp-content/uploads/2023/04/sentiment-analysis-and-written-test-emotion-recognition-automated-artificial-intelligence-technologies-happy-man-and-259168367-1-1024x745.jpg"); */
-            background-image: url("https://prowly.com/magazine/wp-content/uploads/2023/11/How-to-do-sentiment-analysis-for-PR-And-what-is-sentiment-analysis-1.png");
-            background-color: #b1a9f7;
-            background-repeat: no-repeat;
-        }
-        @media (min-width: 576px) {
-            body {
-                background-position: center;
-                background-size: cover;
-            }
-            form {
-                position: absolute;
-                top: 18%;
-                left: 50.5%;
-                transform: translate(-50%);
-                width: 35%;
-            }
-        }
-        @media (max-width: 575.98px) {
-            body {
-                background-position: top;
-                background-size: 190% auto;
-            }
-            form {
-                position: absolute;
-                top: 9%;
-                left: 51.2%;
-                transform: translate(-50%);
-                width: 70%;
-            }
-        }
-    </style>
-{% endblock %}
-{% block content %}
-    <form action="result/" method="post" class="">
+{% block content_left %}
+    <form action="/result" method="post">
         <textarea 
             name="sentiment" id="sentiment" rows="6" 
             placeholder="Tell me 'bout your feeling here..."
             class="form-control bg-transparen t"
             required
         ></textarea>
-        <button class="btn btn-outline-info btn-light mt-3">
-            Analyze My Sentiment
+        <button class="btn btn-outline-info mt-3">
+            <i class="fa-solid fa-user-doctor"></i>
+            <span class="ms-1">Check My Mental Health</span>
         </button>
     </form>
+{% endblock %}
+{% block content_right %}
+    <input 
+        name="result" id="result"
+        placeholder="Your predicted mental health will show here..."
+        class="form-control bg-transparen t mb-3"
+        disabled readonly
+    >
+    <textarea 
+        name="description" id="description" rows="6" 
+        placeholder="Let me describe to you what is that situation..."
+        class="form-control bg-transparen t"
+        disabled readonly
+    ></textarea>
 {% endblock %}
