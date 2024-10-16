@@ -7,28 +7,21 @@
         class="form-control bg-transparen t"
         disabled readonly
     >{{ text }}</textarea>
-    <a class="btn btn-outline-warning mt-3" href="/home">
+    <a class="btn btn-outline-info mt-3" href="/home">
         <i class="fa fa-solid fa-rotate-left"></i>
         <span class="ms-1">Try Again</span>
     </a>
 {% endblock %}
 {% block content_right %}
-    <div class="mb-3 row">
-        <label for="result" class="col-sm col-form-label px-0">From your story, we guest that it was</label>
-        <div class="col-sm ps-0">
-            <input 
-                name="result" id="result"
-                placeholder="Your predicted mental health will show here..."
-                class="form-control bg-transparen t fw-bold text-uppercase"
-                disabled readonly
-                value={{ data }}
-            >
-        </div>
-    </div>
-    <textarea 
+    <h5 class="fw-semibold mb-0 text-nowrap">From your story, we guest that it's</h5>
+    <br>
+    <mark class="fs-4 px-3 py-2 fw-bold">{{ data["prob"] }}</mark>
+    <br><br>
+    <mark class="fs-4 px-3 py-2 fw-bold text-uppercase">{{ data["pred"] }}</mark>
+    <!-- <textarea 
         name="description" id="description" rows="5" 
         placeholder="Let me describe to you what is that situation..."
-        class="form-control bg-transparen t"
+        class="form-control bg-transparent mt-4"
         disabled readonly
-    ></textarea>
+    ></textarea> -->
 {% endblock %}

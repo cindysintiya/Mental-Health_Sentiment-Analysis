@@ -42,21 +42,16 @@ def home_page():
 
 @analysis.route("/result", methods=["POST"])
 def result():
-    sentiment = request.form['sentiment']
+    sentiment = str(request.form['sentiment']).strip()
     if sentiment:
-        # def rev_transform_class(class_arr):
-        #     return classes[class_arr.argmax()]
-        
-        # def predict_sentiment_load(text):
-        #     t = torch.from_numpy(pad_sequences(tokenizer.texts_to_sequences([text]), maxlen = max_len))
-        #     pred = model(t.to(device))
+        input_tensor = torch.from_numpy(pad_sequences(tokenizer.texts_to_sequences([sentiment]), maxlen = max_len))
+        prediction, probability = model(input_tensor.to(device))
+        prediction = prediction.cpu().detach().numpy().argmax(axis=1).flatten()[0]
 
-        #     return rev_transform_class(pred)
-        
-        t = torch.from_numpy(pad_sequences(tokenizer.texts_to_sequences([sentiment]), maxlen = max_len))
-        prediction = model(t.to(device))
-
-        result = classes[prediction.argmax()]
+        result = {
+            "pred": classes[prediction],
+            "prob": "{:.2f}%".format(probability.max().item() * 100)
+        }
 
         return render_template("result.html", text=sentiment, data=result)
     
