@@ -2,9 +2,6 @@ from flask import Blueprint, render_template, request, redirect
 
 analysis = Blueprint("analysis", __name__)
 
-import pandas as pd
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.preprocessing.text import Tokenizer
 import torch
 
 classes, max_len, vocab_size, tokenizer, device, model = None, None, None, None, None, None
@@ -15,16 +12,20 @@ def home_page():
     global classes, max_len, vocab_size, tokenizer, device, model
 
     if not model :   # cek apakah sebelumnya model sudah di-load atau belum
-        raw_data = pd.read_csv("./data/sentiments.csv")
-        df = raw_data.dropna()
 
-        classes = df['status'].unique()
+        import json
+        from tensorflow.keras.preprocessing.text import tokenizer_from_json
 
-        tokenizer = Tokenizer(oov_token='UNK', lower = True)
-        tokenizer.fit_on_texts(df['statement'].values)
+        with open('./data/config.json', 'r') as f:
+            config_data = json.load(f)
 
-        max_len = max([len(x) for x in tokenizer.texts_to_sequences(df['statement'].values)])   # 5421
-        vocab_size = len(tokenizer.word_index) + 1
+        # Extract variables
+        classes = config_data['classes']
+        max_len = config_data['max_len']
+        vocab_size = config_data['vocab_size']
+
+        # Recreate the tokenizer from its JSON string
+        tokenizer = tokenizer_from_json(config_data['tokenizer'])
 
         # Model path
         PATH = './data/sentiment_analysis_model.h5'
@@ -44,6 +45,8 @@ def home_page():
 def result():
     sentiment = str(request.form['sentiment']).strip()
     if sentiment:
+        from tensorflow.keras.preprocessing.sequence import pad_sequences
+
         input_tensor = torch.from_numpy(pad_sequences(tokenizer.texts_to_sequences([sentiment]), maxlen = max_len))
         prediction, probability = model(input_tensor.to(device))
         prediction = prediction.cpu().detach().numpy().argmax(axis=1).flatten()[0]
