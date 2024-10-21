@@ -2,5 +2,5 @@ Flask
 Jinja2
 tensorflow
 torch
-sklearn
+scikit-learn
 tqdm
