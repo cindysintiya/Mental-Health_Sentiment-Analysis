@@ -1,5 +1,7 @@
 Flask
 Jinja2
+numpy
+pandas
 tensorflow
 torch
 scikit-learn
