@@ -14,25 +14,28 @@
         body {
             min-height: 100vh;
         }
-        mark {
+        mark, footer, #sentiment-result {
             background-color: #0ebfb5;
             color: white;
             font-size: 18px;
         }
         img {
-            max-width: 50%;
+            max-width: 70%;
+            margin-top: 5px;
         }
         @media (min-width: 700px) {
             img {
-                max-width: 30%;
-                margin-top: -37.5px;
+                max-width: 40%;
+                margin-top: -10px;
             }
         }
         .border {
             border-color: #0ebfb5 !important;
+        }
+        .border.dashed {
             border-style: dashed !important;
         }
-        .form-control:focus, .btn:focus {
+        .form-control:focus, .form-select:focus, .btn:focus {
             box-shadow: 0 0 0 0.2rem #0ebfb67d;
         }
         .btn.btn-outline-info, .btn.btn-outline-info:focus {
@@ -45,21 +48,19 @@
             color: white;
             background-color: #0ebfb5;
         }
+        .text-justify {
+            text-align: justify;
+        }
     </style>
 </head>
-<body class="container-fluid text-center px-sm-5 p-4">
-    <section id="app" class="row gap-4">
-        <div class="col-md p-4 border border-4 rounded">
-            {% block content_left %}{% endblock %}
-        </div>
-        <div class="col-md p-4 border border-4 rounded">
-            {% block content_right %}{% endblock %}
-        </div>
-    </section>
+<body class="container-fluid text-center px-0">
+    <main class="p-4 px-sm-5">
+        {% block content %}{% endblock %}
+    </main>
 
-    <section class="text-end">
-        <img src="https://wallpapers.com/images/hd/animated-brain-doctor-character-cqtqv3km5d3x7z97.jpg" alt="">
-    </section>
+    <footer class="fw-semibold fs-6 p-1">
+        Copyright &copy; 2024 - GCD
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>

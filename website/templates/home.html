@@ -1,30 +1,45 @@
 {% extends "layout.html" %}
 {% block title %} Home {% endblock %}
-{% block content_left %}
-    <form action="/result" method="post">
-        <textarea 
-            name="sentiment" id="sentiment" rows="6" 
-            placeholder="Tell me 'bout your feeling here..."
-            class="form-control bg-transparen t"
-            required
-        ></textarea>
+{% block content %}
+    <form action="/result" method="post" class="border border-2 shadow p-4 mx-xl-5">
+        <h2>Check Your Mental Health</h2>
+        <hr class="mb-1">
+        <hr class="mt-0">
+        {% for key in quest %}
+            {% if (key != "Growing_Stress") %}
+                <div class="mb-3 mx-md-4 row">
+                    <label for="{{key}}" class="col col-form-label text-start fw-semibold">{{key.title().replace("_", " ")}}</label>
+                    <div class="col-md-9">
+                        <select name="{{key}}" id="{{key}}" class="form-select" required>
+                            <option value="" selected disabled>- Choose Answer -</option>
+                            {% for val in quest[key] %}
+                                <option value="{{val}}">{{val}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        <div class="mb-3 mx-md-4 row">
+            <label for="sentiment" class="col col-form-label text-start fw-semibold">How do you feel these day(s)</label>
+            <div class="col-md-9">
+                <select name="lang" id="lang" class="form-select mb-2" required>
+                    <option value="en" selected>Language: English</option>
+                    {% for id in lang %}
+                        <option value="{{id}}">Language: {{lang[id].capitalize()}}</option>
+                    {% endfor %}
+                </select>
+                <textarea 
+                    name="sentiment" id="sentiment" rows="5" 
+                    placeholder="Tell me 'bout your feeling here..."
+                    class="form-control bg-transparen t"
+                    required
+                ></textarea>
+            </div>
+        </div>
         <button class="btn btn-outline-info mt-3">
             <i class="fa-solid fa-user-doctor"></i>
             <span class="ms-1">Check My Mental Health</span>
         </button>
     </form>
-{% endblock %}
-{% block content_right %}
-    <input 
-        name="result" id="result"
-        placeholder="Your predicted mental health will show here..."
-        class="form-control bg-transparen t mb-2"
-        disabled readonly
-    >
-    <textarea 
-        name="description" id="description" rows="6" 
-        placeholder="Let me describe to you what is that situation..."
-        class="form-control bg-transparen t"
-        disabled readonly
-    ></textarea>
 {% endblock %}

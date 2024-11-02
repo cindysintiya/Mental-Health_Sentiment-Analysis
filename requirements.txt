@@ -6,3 +6,5 @@ tensorflow
 torch
 scikit-learn
 tqdm
+deep-translator
+joblib

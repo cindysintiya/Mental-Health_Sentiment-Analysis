@@ -1,27 +1,46 @@
 {% extends "layout.html" %}
 {% block title %} Result {% endblock %}
-{% block content_left %}
-    <textarea 
-        name="sentiment" id="sentiment" rows="6" 
-        placeholder="Tell me 'bout your feeling here..."
-        class="form-control bg-transparen t"
-        disabled readonly
-    >{{ text }}</textarea>
-    <a class="btn btn-outline-info mt-3" href="/home">
-        <i class="fa fa-solid fa-rotate-left"></i>
-        <span class="ms-1">Try Again</span>
-    </a>
-{% endblock %}
-{% block content_right %}
-    <h5 class="fw-semibold mb-0 text-nowrap">From your story, we guest that it's</h5>
-    <br>
-    <mark class="fs-4 px-3 py-2 fw-bold">{{ data["prob"] }}</mark>
-    <br><br>
-    <mark class="fs-4 px-3 py-2 fw-bold text-uppercase">{{ data["pred"] }}</mark>
-    <!-- <textarea 
-        name="description" id="description" rows="5" 
-        placeholder="Let me describe to you what is that situation..."
-        class="form-control bg-transparent mt-4"
-        disabled readonly
-    ></textarea> -->
+{% block content %}
+    <h2>Your Mental Health Analysis Result</h2>
+    <hr class="mb-1">
+    <hr class="mt-0">
+    <section class="row gap-4">
+        <div class="col-md p-4 border dashed border-4 rounded">
+            <p style="line-height: 35px;">
+                So, you tell us that your occupation is
+                <mark class="px-2 fw-semibold">{{ stress["story"]["Occupation"] }}</mark>.
+                <br>
+                You <mark class="px-2 fw-semibold">{{ stress["story"]["Days_Indoors"] }}</mark>, <mark class="px-2 fw-semibold">{{ stress["story"]["Work_Interest"] }}</mark> interest in work, also <mark class="px-2 fw-semibold">{{ stress["story"]["Changes_Habits"] }}</mark> changing habits, <mark class="px-2 fw-semibold">{{ stress["story"]["Mental_Health_History"] }}</mark> mental health history before.
+                You <mark class="px-2 fw-semibold">{{ stress["story"]["treatment"] }}</mark> trying to find a treatment <mark class="px-2 fw-semibold">{{ stress["story"]["Coping_Struggles"] }}</mark> to coping it. 
+                You have <mark class="px-2 fw-semibold">{{ stress["story"]["Mood_Swings"].lower() }}</mark> mood swings, and you <mark class="px-2 fw-semibold">{{ stress["story"]["Social_Weakness"] }} weak</mark> at socializing with each other.
+            </p>
+            <p class="text-start mb-1">And you also tell us that:</p>
+            <p id="sentiment-result" class="text-justify fw-semibold p-2 mb-1">{{ text }}</p>
+            <p class="text-end">- Story written in {{ lang }} -</p>
+            <a class="btn btn-outline-info mt-3 fw-semibold" href="/home">
+                <i class="fa fa-solid fa-rotate-left"></i>
+                <span class="ms-1">Try Again</span>
+            </a>
+        </div>
+        <div class="col-md p-4 pb-0 border dashed border-4 rounded" style="max-height: max-content;">
+            <h5 class="fw-semibold mb-3">
+                From what you choose in the form, we predicted that
+            </h5>
+            <mark class="fs-5 p-2 fw-bold">{{ stress["prob"] }}</mark>
+            <span class="fs-5 fw-semibold">{{ "it's" if stress["pred"]=="No" else "" }}</span>
+            <mark class="fs-5 p-2 fw-bold text-uppercase">{{ "NOT" if stress["pred"]=="No" else stress["pred"] }}</mark>
+            <span class="fs-5 fw-semibold">{{ "" if stress["pred"]=="No" else "it's" }}</span>
+            <mark class="fs-5 p-2 fw-bold text-uppercase">STRESS</mark>
+            <br><br>
+            <h5 class="fw-semibold mb-3">
+                And from your story, we analyze that you are
+            </h5>
+            <mark class="fs-4 px-3 py-2 fw-bold">{{ sentiment["prob"] }}</mark>
+            <br><br>
+            <mark class="fs-4 px-3 py-2 fw-bold text-uppercase">{{ sentiment["pred"] }}</mark>
+            <div class="text-end">
+                <img src="https://wallpapers.com/images/hd/animated-brain-doctor-character-cqtqv3km5d3x7z97.jpg" alt="">
+            </div>
+        </div>
+    </section>
 {% endblock %}

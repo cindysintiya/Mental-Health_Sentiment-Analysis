@@ -5,7 +5,7 @@
     ```
 - Or you can run this command if you are using Anaconda
     ```
-    conda install Flask Jinja2 numpy pandas tensorflow torch scikit-learn tqdm
+    conda install Flask Jinja2 numpy pandas tensorflow torch scikit-learn tqdm deep-translator joblib
     ```
 - Make sure that all of the packages in **"requirement.txt"** was installed on your machine
     ```
