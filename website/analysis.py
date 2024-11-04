@@ -92,10 +92,12 @@ def home_page():
 def home_api():
     load_randfor_model()
     load_lstm_model()
-    return jsonify({"status": 200, "message": "Model successfully loaded!", "lang": languages})
+    return jsonify({"status": 200, "message": "Model successfully loaded!", "lang": languages, "quest": questions})
 
 
 def sentiment_analysis(text, lang) :
+    load_lstm_model()
+    
     from deep_translator import GoogleTranslator
     from tensorflow.keras.preprocessing.sequence import pad_sequences
 
@@ -116,7 +118,9 @@ def sentiment_analysis(text, lang) :
     return result
 
 
-def stress_prediction(form) : 
+def stress_prediction(form) :
+    load_randfor_model()
+
     import pandas as pd
 
     data = pd.DataFrame([form])

@@ -1,5 +1,6 @@
 Flask
 Jinja2
+flask-cors
 numpy
 pandas
 tensorflow

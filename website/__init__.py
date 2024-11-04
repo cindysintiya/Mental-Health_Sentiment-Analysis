@@ -1,8 +1,10 @@
 from flask import Flask, render_template
+from flask_cors import CORS
 
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = "secret!hahaha"  # kunci keamanan
+    CORS(app)
 
     # import semua route
     from .loading import loading
