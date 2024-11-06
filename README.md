@@ -18,6 +18,10 @@
 ## Run App
 - If you are using Anaconda, make sure that the **(base)** is activated on your terminal (just skip if you're using pip or the base is already activated)
     ```
+    C:/Users/<device_name>/anaconda3/Scripts/activate
+    ```
+  or
+    ```
     conda activate base
     ```
 - Simply type or copy this command to run the Flask app
