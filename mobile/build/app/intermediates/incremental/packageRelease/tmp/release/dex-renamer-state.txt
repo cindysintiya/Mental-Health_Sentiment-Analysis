@@ -1,0 +1,4 @@
+#Wed Nov 06 08:58:27 WIB 2024
+base.0=D\:\\7. Pembelajaran Mesin\\Kelompok\\mental_health_gcd\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

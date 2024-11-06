@@ -15,7 +15,7 @@
     ```
     conda list
     ```
-## Run App
+## Run Web App or API
 - If you are using Anaconda, make sure that the **(base)** is activated on your terminal (just skip if you're using pip or the base is already activated)
     ```
     C:/Users/<device_name>/anaconda3/Scripts/activate
@@ -27,4 +27,28 @@
 - Simply type or copy this command to run the Flask app
     ```
     python app.py
+    ```
+## Run Mobile App
+- Make sure your device are connected. You can run adb to connect your device by wireless debuging:
+    ```
+    adb pair <host>:<port>
+    ```
+    Enter pairing code: ...
+    ```
+    adb connect <host>:<port>
+    ```
+- Open terminal and go to the "mobile" folder
+    ```
+    cd mobile
+    ```
+- Simply type or copy this command to run the built app
+    ```
+    flutter install
+    ```
+    or you can run by debug (not recommended)
+    ```
+    flutter pub get
+    ```
+    ```
+    flutter run
     ```

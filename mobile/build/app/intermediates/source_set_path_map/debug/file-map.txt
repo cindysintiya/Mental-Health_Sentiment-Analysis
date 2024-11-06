@@ -1,0 +1,28 @@
+com.example.mental_health_gcd.app-jetified-lifecycle-viewmodel-savedstate-2.7.0-0 C:\Users\HP\.gradle\caches\transforms-3\09f820bff0fd5f8a6e5298bd7a60d615\transformed\jetified-lifecycle-viewmodel-savedstate-2.7.0\res
+com.example.mental_health_gcd.app-jetified-savedstate-1.2.1-1 C:\Users\HP\.gradle\caches\transforms-3\16e950dbca3d98a0071cf585c010ba52\transformed\jetified-savedstate-1.2.1\res
+com.example.mental_health_gcd.app-jetified-profileinstaller-1.3.1-2 C:\Users\HP\.gradle\caches\transforms-3\3bfa66345244ac249fb7762de10064d7\transformed\jetified-profileinstaller-1.3.1\res
+com.example.mental_health_gcd.app-jetified-lifecycle-process-2.7.0-3 C:\Users\HP\.gradle\caches\transforms-3\42bd02ca4569bd43f0d05e6850cfc98c\transformed\jetified-lifecycle-process-2.7.0\res
+com.example.mental_health_gcd.app-jetified-activity-1.8.1-4 C:\Users\HP\.gradle\caches\transforms-3\42e20361dd3e0a2c3c23a5fcf861414e\transformed\jetified-activity-1.8.1\res
+com.example.mental_health_gcd.app-lifecycle-runtime-2.7.0-5 C:\Users\HP\.gradle\caches\transforms-3\4c2eb37faee91cacf99eb52e677a4613\transformed\lifecycle-runtime-2.7.0\res
+com.example.mental_health_gcd.app-jetified-lifecycle-livedata-core-ktx-2.7.0-6 C:\Users\HP\.gradle\caches\transforms-3\548d52ae1101f3c85c1edcd0bd95ee93\transformed\jetified-lifecycle-livedata-core-ktx-2.7.0\res
+com.example.mental_health_gcd.app-jetified-window-1.2.0-7 C:\Users\HP\.gradle\caches\transforms-3\55f81d696275acf238e638ec86d86195\transformed\jetified-window-1.2.0\res
+com.example.mental_health_gcd.app-fragment-1.7.1-8 C:\Users\HP\.gradle\caches\transforms-3\6295248c29ac303f402b1ef8d1258b22\transformed\fragment-1.7.1\res
+com.example.mental_health_gcd.app-lifecycle-viewmodel-2.7.0-9 C:\Users\HP\.gradle\caches\transforms-3\6ca424098a8c8817f49672a7b7e51226\transformed\lifecycle-viewmodel-2.7.0\res
+com.example.mental_health_gcd.app-lifecycle-livedata-core-2.7.0-10 C:\Users\HP\.gradle\caches\transforms-3\726fb99aa6598777a5b1ea62d6592c16\transformed\lifecycle-livedata-core-2.7.0\res
+com.example.mental_health_gcd.app-jetified-core-1.0.0-11 C:\Users\HP\.gradle\caches\transforms-3\842f76f12d6e7dad723a1be16b405e07\transformed\jetified-core-1.0.0\res
+com.example.mental_health_gcd.app-jetified-startup-runtime-1.1.1-12 C:\Users\HP\.gradle\caches\transforms-3\a042025715b070d02ad361e1677e32f4\transformed\jetified-startup-runtime-1.1.1\res
+com.example.mental_health_gcd.app-lifecycle-livedata-2.7.0-13 C:\Users\HP\.gradle\caches\transforms-3\b70959336be177eba0d991adf0904450\transformed\lifecycle-livedata-2.7.0\res
+com.example.mental_health_gcd.app-core-1.13.1-14 C:\Users\HP\.gradle\caches\transforms-3\bc7de25afbe366666b80a396493ee266\transformed\core-1.13.1\res
+com.example.mental_health_gcd.app-jetified-annotation-experimental-1.4.0-15 C:\Users\HP\.gradle\caches\transforms-3\bd78fc1a7d00d3af677249eabe93de9a\transformed\jetified-annotation-experimental-1.4.0\res
+com.example.mental_health_gcd.app-jetified-core-ktx-1.13.1-16 C:\Users\HP\.gradle\caches\transforms-3\c7aa4e6ca6b2e16e5465ff90d905f7eb\transformed\jetified-core-ktx-1.13.1\res
+com.example.mental_health_gcd.app-core-runtime-2.2.0-17 C:\Users\HP\.gradle\caches\transforms-3\d8c9b688012e36572c8534c6263caab5\transformed\core-runtime-2.2.0\res
+com.example.mental_health_gcd.app-jetified-tracing-1.2.0-18 C:\Users\HP\.gradle\caches\transforms-3\df7c02da2a7c4e71420b07986033754d\transformed\jetified-tracing-1.2.0\res
+com.example.mental_health_gcd.app-jetified-window-java-1.2.0-19 C:\Users\HP\.gradle\caches\transforms-3\f3f5be6606473fc846a89b5164febe5a\transformed\jetified-window-java-1.2.0\res
+com.example.mental_health_gcd.app-debug-20 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\android\app\src\debug\res
+com.example.mental_health_gcd.app-main-21 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\android\app\src\main\res
+com.example.mental_health_gcd.app-pngs-22 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\generated\res\pngs\debug
+com.example.mental_health_gcd.app-resValues-23 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\generated\res\resValues\debug
+com.example.mental_health_gcd.app-rs-24 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\generated\res\rs\debug
+com.example.mental_health_gcd.app-mergeDebugResources-25 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.mental_health_gcd.app-mergeDebugResources-26 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.mental_health_gcd.app-merged_res-27 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\merged_res\debug
