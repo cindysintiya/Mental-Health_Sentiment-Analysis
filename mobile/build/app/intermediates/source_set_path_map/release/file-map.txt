@@ -18,11 +18,11 @@ com.example.mental_health_gcd.app-jetified-core-ktx-1.13.1-16 C:\Users\HP\.gradl
 com.example.mental_health_gcd.app-core-runtime-2.2.0-17 C:\Users\HP\.gradle\caches\transforms-3\d8c9b688012e36572c8534c6263caab5\transformed\core-runtime-2.2.0\res
 com.example.mental_health_gcd.app-jetified-tracing-1.2.0-18 C:\Users\HP\.gradle\caches\transforms-3\df7c02da2a7c4e71420b07986033754d\transformed\jetified-tracing-1.2.0\res
 com.example.mental_health_gcd.app-jetified-window-java-1.2.0-19 C:\Users\HP\.gradle\caches\transforms-3\f3f5be6606473fc846a89b5164febe5a\transformed\jetified-window-java-1.2.0\res
-com.example.mental_health_gcd.app-main-20 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\android\app\src\main\res
-com.example.mental_health_gcd.app-release-21 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\android\app\src\release\res
-com.example.mental_health_gcd.app-pngs-22 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\generated\res\pngs\release
-com.example.mental_health_gcd.app-resValues-23 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\generated\res\resValues\release
-com.example.mental_health_gcd.app-rs-24 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\generated\res\rs\release
-com.example.mental_health_gcd.app-mergeReleaseResources-25 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.example.mental_health_gcd.app-mergeReleaseResources-26 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.example.mental_health_gcd.app-merged_res-27 D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\merged_res\release
+com.example.mental_health_gcd.app-main-20 D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\android\app\src\main\res
+com.example.mental_health_gcd.app-release-21 D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\android\app\src\release\res
+com.example.mental_health_gcd.app-pngs-22 D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\generated\res\pngs\release
+com.example.mental_health_gcd.app-resValues-23 D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\generated\res\resValues\release
+com.example.mental_health_gcd.app-rs-24 D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\generated\res\rs\release
+com.example.mental_health_gcd.app-mergeReleaseResources-25 D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.mental_health_gcd.app-mergeReleaseResources-26 D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.mental_health_gcd.app-merged_res-27 D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\intermediates\merged_res\release

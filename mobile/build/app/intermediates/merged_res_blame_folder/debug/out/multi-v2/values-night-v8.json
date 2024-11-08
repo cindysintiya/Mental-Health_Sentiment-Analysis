@@ -4,7 +4,7 @@
             "outputFile": "com.example.mental_health_gcd.app-mergeDebugResources-25:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\7. Pembelajaran Mesin\\Kelompok\\mental_health_gcd\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\7. Pembelajaran Mesin\\Kelompok\\sentiment-analysis\\mobile\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

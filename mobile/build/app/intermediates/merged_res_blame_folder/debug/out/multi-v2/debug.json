@@ -849,25 +849,6 @@
                     }
                 },
                 {
-                    "source": "D:\\7. Pembelajaran Mesin\\Kelompok\\mental_health_gcd\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,832",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "483,998"
-                    },
-                    "to": {
-                        "startLines": "155,159",
-                        "startColumns": "4,4",
-                        "startOffsets": "7894,8075",
-                        "endLines": "158,161",
-                        "endColumns": "12,12",
-                        "endOffsets": "8070,8239"
-                    }
-                },
-                {
                     "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-3\\16e950dbca3d98a0071cf585c010ba52\\transformed\\jetified-savedstate-1.2.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2",
@@ -918,6 +899,25 @@
                         "startOffsets": "6888",
                         "endColumns": "42",
                         "endOffsets": "6926"
+                    }
+                },
+                {
+                    "source": "D:\\7. Pembelajaran Mesin\\Kelompok\\sentiment-analysis\\mobile\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,832",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "483,998"
+                    },
+                    "to": {
+                        "startLines": "155,159",
+                        "startColumns": "4,4",
+                        "startOffsets": "7894,8075",
+                        "endLines": "158,161",
+                        "endColumns": "12,12",
+                        "endOffsets": "8070,8239"
                     }
                 },
                 {
@@ -1266,7 +1266,7 @@
             "outputFile": "com.example.mental_health_gcd.app-merged_res-27:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "D:\\7. Pembelajaran Mesin\\Kelompok\\mental_health_gcd\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\7. Pembelajaran Mesin\\Kelompok\\sentiment-analysis\\mobile\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

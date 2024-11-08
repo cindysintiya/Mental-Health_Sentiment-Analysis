@@ -1,8 +1,8 @@
 <libraries>
   <library
-      name="__local_aars__:D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-      jars="D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\flutter\release\libs.jar"
-      resolved="__local_aars__:D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
+      name="__local_aars__:D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+      jars="D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\intermediates\flutter\release\libs.jar"
+      resolved="__local_aars__:D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
       name="io.flutter:flutter_embedding_release:1.0.0-db49896cf25ceabc44096d5f088d86414e05a7aa@jar"
       jars="C:\Users\HP\.gradle\caches\modules-2\files-2.1\io.flutter\flutter_embedding_release\1.0.0-db49896cf25ceabc44096d5f088d86414e05a7aa\9ff06a3e2b6d378066ecec963d00d5d3b288f37\flutter_embedding_release-1.0.0-db49896cf25ceabc44096d5f088d86414e05a7aa.jar"

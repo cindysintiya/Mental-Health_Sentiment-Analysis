@@ -1,8 +1,8 @@
-#Mon Nov 04 19:42:59 WIB 2024
-base.0=D\:\\7. Pembelajaran Mesin\\Kelompok\\mental_health_gcd\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=D\:\\7. Pembelajaran Mesin\\Kelompok\\mental_health_gcd\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.2=D\:\\7. Pembelajaran Mesin\\Kelompok\\mental_health_gcd\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
-base.3=D\:\\7. Pembelajaran Mesin\\Kelompok\\mental_health_gcd\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
+#Fri Nov 08 10:19:16 WIB 2024
+base.0=D\:\\7. Pembelajaran Mesin\\Kelompok\\sentiment-analysis\\mobile\\build\\app\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=D\:\\7. Pembelajaran Mesin\\Kelompok\\sentiment-analysis\\mobile\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.2=D\:\\7. Pembelajaran Mesin\\Kelompok\\sentiment-analysis\\mobile\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.3=D\:\\7. Pembelajaran Mesin\\Kelompok\\sentiment-analysis\\mobile\\build\\app\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=12/classes.dex

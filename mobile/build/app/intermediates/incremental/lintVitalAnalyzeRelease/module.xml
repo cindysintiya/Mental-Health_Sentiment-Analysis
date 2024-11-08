@@ -1,11 +1,11 @@
 <lint-module
     format="1"
-    dir="D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\android\app"
+    dir="D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\android\app"
     name=":app"
     type="APP"
     maven="android:app:"
     gradle="7.3.0"
-    buildFolder="D:\7. Pembelajaran Mesin\Kelompok\mental_health_gcd\build\app"
+    buildFolder="D:\7. Pembelajaran Mesin\Kelompok\sentiment-analysis\mobile\build\app"
     bootClassPath="C:\Android\platforms\android-34\android.jar;C:\Android\build-tools\30.0.3\core-lambda-stubs.jar"
     javaSourceLevel="1.8"
     compileTarget="android-34">
